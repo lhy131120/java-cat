@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
 public class MyController {
 
-  @Autowired
-  @Qualifier("canonPrinter")
+  @Autowired 
+  // @Qualifier("hpPrinter")
   private Printer printer;
   
   @RequestMapping("/test")
