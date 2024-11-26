@@ -14,8 +14,8 @@ public class MyConfiguration {
     return new HpPrinter();
   }
 
-  @Bean
-  public Printer yourPrinter() {
-    return new CanonPrinter();
-  }
+  // @Bean
+  // public Printer yourPrinter() {
+  //   return new CanonPrinter();
+  // }
 }

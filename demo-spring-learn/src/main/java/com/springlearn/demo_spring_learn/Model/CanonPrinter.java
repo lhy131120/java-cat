@@ -1,5 +1,8 @@
 package com.springlearn.demo_spring_learn.Model;
 
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
 public class CanonPrinter implements Printer{
 
   @Override

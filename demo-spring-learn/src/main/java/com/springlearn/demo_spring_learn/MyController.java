@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MyController {
 
   @Autowired
-  @Qualifier("yourPrinter")
+  @Qualifier("canonPrinter")
   private Printer printer;
   
   @RequestMapping("/test")
@@ -20,5 +20,4 @@ public class MyController {
     printer.print("App Running...");
     return "Return App Run";
   }
-  
 }
