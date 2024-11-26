@@ -3,7 +3,6 @@ package com.springlearn.demo_spring_learn;
 import org.springframework.web.bind.annotation.RestController;
 import com.springlearn.demo_spring_learn.Model.Printer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MyController {
 
   @Autowired 
-  // @Qualifier("hpPrinter")
   private Printer printer;
   
   @RequestMapping("/test")
