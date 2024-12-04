@@ -1,5 +1,7 @@
 package com.springlearn.demo_spring_learn;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,8 +16,8 @@ import jakarta.validation.Valid;
 public class StudentController {
   
   @PostMapping("/students")
-  public String create(@RequestBody @Valid Student student) {
-    return "Run PostMapping!!!!";
+  public ResponseEntity<String> create(@RequestBody @Valid Student student) {
+    return ResponseEntity.status(HttpStatus.ACCEPTED).body("Response Content");
   }
 
   @GetMapping("/students/{studentId}")
