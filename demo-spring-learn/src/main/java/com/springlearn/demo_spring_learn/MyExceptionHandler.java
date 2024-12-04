@@ -36,6 +36,16 @@ public class MyExceptionHandler {
   @ExceptionHandler(NoResourceFoundException.class)
   public ResponseEntity<String> handle(NoResourceFoundException e) {
     return ResponseEntity.status(HttpStatus.BAD_REQUEST)//
-        .body("<h2>NoResourceFoundException " + e.getMessage() +"</h2>");
+        .body("<h2>NoResourceFoundException " + e.getMessage() + "</h2>");
+  }
+
+  /*
+   * NullPointerException
+   */
+
+  @ExceptionHandler(NullPointerException.class)
+  public ResponseEntity<String> handle(NullPointerException e) {
+    return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+        .body("NullPointerException :" + e.getMessage());
   }
 }
