@@ -13,5 +13,5 @@ spring:
 
 spring.jpa:
   show-sql: true
-  hibernate.ddl-auto: create-drop # update
-  properties: 
+  hibernate.ddl-auto: update #create-drop # update
+  # properties: 

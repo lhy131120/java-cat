@@ -26,6 +26,7 @@ public class StockEntity implements Serializable{
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "stock_id")
   private Long id;
   @Column(nullable = false, unique = true, length = 10)
   private String symbol;
