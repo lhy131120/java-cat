@@ -15,7 +15,6 @@ public class UrlManager {
     this.domain = builder.domain;
     this.version = builder.version;
     this.endpoint = builder.endpoint;
-    this.version = builder.version;
     this.params = builder.params;
   }
 
@@ -23,13 +22,13 @@ public class UrlManager {
     return new Builder();
   }
 
-  public String toUrlString() {
-    return UriComponentsBuilder.newInstance()//
-        .scheme(this.scheme.name().toLowerCase())//
-        .host(this.domain)//
-        .path(this.version)//
-        .path(this.endpoint)//
-        .queryParams(this.params)//
+  public String toUriString() {
+    return UriComponentsBuilder.newInstance() //
+        .scheme(this.scheme.name().toLowerCase()) //
+        .host(this.domain) //
+        .path(this.version) //
+        .path(this.endpoint) //
+        .queryParams(this.params) //
         .toUriString();
   }
 

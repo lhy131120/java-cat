@@ -1,6 +1,6 @@
 package com.bcyahoofinance.bc_yahoo_finance.infra.web;
 
-public enum ErrorCode {
+public enum ErrorCode implements Errorable{
   Entity_NOT_FOUND_EX(1, "Entity not found."), //
   INV_INPUT_EX(2, "Invalid Input."), //
   REST_CLIENT_EX(3, "Rest Client Exception."),;
@@ -13,10 +13,12 @@ public enum ErrorCode {
     this.message = message;
   }
 
+  @Override
   public int getCode() {
     return this.code;
   }
 
+  @Override
   public String getMessage() {
     return this.message;
   }

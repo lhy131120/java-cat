@@ -2,8 +2,9 @@ package com.bcyahoofinance.bc_yahoo_finance.infra.web;
 
 public enum SysCode {
   OK("000000", "Success."), //
-  FAIL("100000", "Fail."), //
-  EXCEPTION("999999", "Unhandled Exception."),;
+  FAIL("900000", "Fail."), //
+  EXCEPTION("999999", "Unhandled Exception."), //
+  ;
 
   private String code;
   private String message;
@@ -20,4 +21,5 @@ public enum SysCode {
   public String getMessage() {
     return this.message;
   }
+  
 }
